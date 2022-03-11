@@ -12,4 +12,4 @@
 
 
 
-Aplikasi ini dibuat menggunakan React-Native
+Aplikasi ini dibuat menggunakan React-Native dengan menggunakan modul react-navigation.
