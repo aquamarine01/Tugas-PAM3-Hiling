@@ -3,21 +3,12 @@ import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-function Homskrin() {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#24823d'}}>
-      <Text>Gatau disini apaan</Text>
-    </View>
-  );
-}
-
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="Selfhiling.id" component={Homskrin} />
       </Stack.Navigator>
     </NavigationContainer>
   );
