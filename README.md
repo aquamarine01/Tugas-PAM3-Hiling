@@ -1,2 +1,15 @@
 # Tugas-PAM3-Hiling
- Tugas 3 PAM RB
+
+ Mahasiswa :
+> Nama   : M. Ammar Fadhila Ramadhan
+> 
+> NIM    : 119140029
+> 
+> Kelas  : PAM RB
+
+
+
+
+
+
+Aplikasi ini dibuat menggunakan React-Native
