@@ -1,112 +1,112 @@
-const flight = [
+const maskapai = [
     {
-        flight_id: "DR",
-        flight_name: "Dragon Air",
-        flight_logo: require('../logo/dragon.png'),
+        maskapai_id: "DR",
+        maskapai_nama: "Dragon Air",
+        maskapai_logo: require('../logo/dragon.png'),
     },
     {
-        flight_id: "FO",
-        flight_name: "Forest Cat Air",
-        flight_logo: require('../logo/forest.png'),
+        maskapai_id: "FO",
+        maskapai_nama: "Forest Cat Air",
+        maskapai_logo: require('../logo/forest.png'),
     },
     {
-        flight_id: "MO",
-        flight_name: "Moon Air",
-        flight_logo: require('../logo/moon.png'),
+        maskapai_id: "MO",
+        maskapai_nama: "Moon Air",
+        maskapai_logo: require('../logo/moon.png'),
     },
     {
-        flight_id: "SU",
-        flight_name: "Sun Air",
-        flight_logo: require('../logo/sun.png'),
+        maskapai_id: "SU",
+        maskapai_nama: "Sun Air",
+        maskapai_logo: require('../logo/sun.png'),
     },
     {
-        flight_id: "WH",
-        flight_name: "White Air",
-        flight_logo: require('../logo/white.png'),
+        maskapai_id: "WH",
+        maskapai_nama: "White Air",
+        maskapai_logo: require('../logo/white.png'),
     },
     {
-        flight_id: "WA",
-        flight_name: "Warrior Air",
-        flight_logo: require('../logo/warrior.png'),
+        maskapai_id: "WA",
+        maskapai_nama: "Warrior Air",
+        maskapai_logo: require('../logo/warrior.png'),
     }
 ]
 
-const airport = [
+const bandara = [
     {
-        airp_code: "TLG",
-        airp_name: "Talang Airport",
+        bandara_code: "TLG",
+        bandara_nama: "Talang Airport",
     },
     {
-        airp_code: "JBG",
-        airp_name: "Jabung Airport",
+        bandara_code: "JBG",
+        bandara_nama: "Jabung Airport",
     },
     {
-        airp_code: "BWS",
-        airp_name: "Belwis Airport",
+        bandara_code: "BWS",
+        bandara_nama: "Belwis Airport",
     },
     {
-        airp_code: "ITR",
-        airp_name: "ITERA Airport",
+        bandara_code: "ITR",
+        bandara_nama: "ITERA Airport",
     }
 ]
 
-const schedule =[
+const jadwal =[
     {
-        schedule_id: "001",
-        dept_airp:"TLG",
-        dest_airp:"JBG",
-        flight_id:"WH",
+        jadwal_id: "001",
+        bandara_kode_keberangkatan:"TLG",
+        bandara_kode_tujuan:"JBG",
+        maskapai_id:"WH",
 
     },
     {
-        schedule_id: "002",
-        dept_airp:"TLG",
-        dest_airp:"BWS",
-        flight_id:"SU",
+        jadwal_id: "002",
+        bandara_kode_keberangkatan:"TLG",
+        bandara_kode_tujuan:"BWS",
+        maskapai_id:"SU",
 
     },
     {
-        schedule_id: "003",
-        dept_airp:"ITR",
-        dest_airp:"JBG",
-        flight_id:"WA",
+        jadwal_id: "003",
+        bandara_kode_keberangkatan:"TLG",
+        bandara_kode_tujuan:"ITR",
+        maskapai_id:"WA",
 
     },
     {
-        schedule_id: "004",
-        dept_airp:"BWS",
-        dest_airp:"ITR",
-        flight_id:"MO",
+        jadwal_id: "004",
+        bandara_kode_keberangkatan:"BWS",
+        bandara_kode_tujuan:"ITR",
+        maskapai_id:"MO",
 
     },
     {
-        schedule_id: "005",
-        dept_airp:"JBG",
-        dest_airp:"ITR",
-        flight_id:"FO",
+        jadwal_id: "005",
+        bandara_kode_keberangkatan:"BWS",
+        bandara_kode_tujuan:"ITR",
+        maskapai_id:"FO",
 
     },
     {
-        schedule_id: "006",
-        dept_airp:"ITR",
-        dest_airp:"JBG",
-        flight_id:"DR",
+        jadwal_id: "006",
+        bandara_kode_keberangkatan:"BWS",
+        bandara_kode_tujuan:"ITR",
+        maskapai_id:"DR",
 
     },
     {
-        schedule_id: "007",
-        dept_airp:"TLG",
-        dest_airp:"JBG",
-        flight_id:"WH",
+        jadwal_id: "007",
+        bandara_kode_keberangkatan:"BWS",
+        bandara_kode_tujuan:"ITR",
+        maskapai_id:"WH",
 
     },
     {
-        schedule_id: "008",
-        dept_airp:"TLG",
-        dest_airp:"ITR",
-        flight_id:"DR",
+        jadwal_id: "008",
+        bandara_kode_keberangkatan:"ITR",
+        bandara_kode_tujuan:"JBG",
+        maskapai_id:"DR",
 
     }
 ]
 
-export {flight,airport,schedule}
+export {maskapai,bandara,jadwal}
