@@ -1,4 +1,4 @@
-const maskapai = [
+const Maskapai = [
     {
         maskapai_id: "DR",
         maskapai_nama: "Dragon Air",
@@ -31,7 +31,7 @@ const maskapai = [
     }
 ]
 
-const bandara = [
+const Bandara = [
     {
         bandara_code: "TLG",
         bandara_nama: "Talang Airport",
@@ -50,7 +50,7 @@ const bandara = [
     }
 ]
 
-const jadwal =[
+const Jadwal =[
     {
         jadwal_id: "001",
         bandara_kode_keberangkatan:"TLG",
@@ -109,4 +109,4 @@ const jadwal =[
     }
 ]
 
-export {maskapai,bandara,jadwal}
+export {Maskapai,Bandara,Jadwal}

@@ -1,6 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Colors } from "react-native"
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { View, Text, StyleSheet, Colors, Image } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 const Hilingtitle = () => {
@@ -11,18 +10,21 @@ const Hilingtitle = () => {
                 name="menu"
                 color={'white'}
             />
-            
             <Text style={navStyle.text}>Hiling.id</Text>
-            
-            <FontAwesome 
-                style={navStyle.userIcon}
-                name="user"
-                color={'white'}
+            <Image
+                style={{
+                    height: 35,
+                    width:35,
+                    marginTop:9,
+                    marginRight:15,
+
+                }}
+                source={require('../../logo/ayayo.png')}
             />
         </View>
+        
     )
 }
-
 const navStyle = StyleSheet.create({
     menu: {
         flexDirection: 'row',
@@ -33,19 +35,15 @@ const navStyle = StyleSheet.create({
     text: {
         marginTop: 11,
         fontSize: 20,
+        marginLeft:15,
         color: "white",
         fontWeight: 'bold'
     },
     menuIcon: {
-        marginTop: 1,
+        marginTop:7,
         fontSize: 35,
         marginLeft:20,
         
-    },
-    userIcon: {
-        marginTop: 1,
-        fontSize: 35,
-        marginRight:20,
     },
 })
 

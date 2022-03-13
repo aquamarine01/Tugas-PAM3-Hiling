@@ -59,7 +59,7 @@ const Search = ({navigation}) => {
             <View style={formStyle.package}>
                 <TouchableOpacity 
                     style={formStyle.button}
-                    onPress={() => navigation.navigate('ResultPage', {data: text})}
+                    onPress={() => navigation.navigate('Resulthandler', {data: text})}
                 >
                     <Text style={formStyle.textButton}>Cari</Text>
                 </TouchableOpacity>
@@ -70,7 +70,7 @@ const Search = ({navigation}) => {
 
 const formStyle = StyleSheet.create({
     box:{
-        backgroundColor: '#fff',
+        backgroundColor: 'lightgray',
         borderRadius: 20,
         padding: 50,
         width: '80%',
@@ -95,7 +95,7 @@ const formStyle = StyleSheet.create({
         marginTop: 4,
     },
     text:{
-        fontSize: 16,
+        fontSize: 14,
         fontWeight: 'bold'
     },
     

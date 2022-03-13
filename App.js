@@ -12,6 +12,7 @@ function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName='Landingsearch'>
         <Stack.Screen name="Hiling.id" component={Landingsearch}/>
+        <Stack.Screen name="Resulthandler" component={Resulthandler}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
