@@ -3,7 +3,7 @@ import { View, Text, StyleSheet, Image } from 'react-native';
 import { Maskapai, Jadwal, Bandara } from '../../data/pesawat';
 
 const Result = ({data}) => {
-    var listJadwal = () => {
+    var showschd = () => {
         var newJadwal = Jadwal.filter( (x) => {
             var checkBandaraK = Bandara.filter( (x) => 
                  x.bandara_nama.toLowerCase() == data.keberangkatan.toLowerCase()
@@ -27,7 +27,7 @@ const Result = ({data}) => {
             var checkMaskapai = Maskapai.filter( (x) => {
                 return x.maskapai_id == printJadwal.maskapai_id
             })
-            
+        
             var capitalizeTheFirstLetterOfEachWord = (words) => {
                 var separateWord = words.toLowerCase().split(' ');
                 for (var i = 0; i < separateWord.length; i++) {
@@ -63,7 +63,7 @@ const Result = ({data}) => {
 
     return(
         <View>
-            {listJadwal()}
+            {showschd()}
         </View>
     )
 }
