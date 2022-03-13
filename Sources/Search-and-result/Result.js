@@ -5,14 +5,16 @@ import { Maskapai, Jadwal, Bandara } from '../../data/pesawat';
 const Result = ({data}) => {
     var listJadwal = () => {
         var newJadwal = Jadwal.filter( (x) => {
-            var checkBandaraK = Bandara.filter( (x) => {
-                return x.bandara_nama.toLowerCase() == data.keberangkatan.toLowerCase()
-            })
-
-            var checkBandaraT = Bandara.filter( (x) => {
-                return x.bandara_nama.toLowerCase() == data.tujuan.toLowerCase()
-            })
-
+            var checkBandaraK = Bandara.filter( (x) => 
+                 x.bandara_nama.toLowerCase() == data.keberangkatan.toLowerCase()
+            )
+            if (!checkBandaraK || checkBandaraK.length<1)
+                return false
+            var checkBandaraT = Bandara.filter( (x) => 
+                 x.bandara_nama.toLowerCase() == data.tujuan.toLowerCase()
+            )
+            if (!checkBandaraT || checkBandaraT.length<1)
+                return false
             return (
                 x.bandara_kode_keberangkatan.toLowerCase() == checkBandaraK[0].bandara_kode.toLowerCase() &&
                 x.bandara_kode_tujuan.toLowerCase() == checkBandaraT[0].bandara_kode.toLowerCase()
@@ -41,7 +43,7 @@ const Result = ({data}) => {
                 <View style={resultStyle.box} key={i}>
                     <View style={resultStyle.upperText}>
                         <Text style={resultStyle.text}>{capitalizeTheFirstLetterOfEachWord(data.keberangkatan)}</Text>
-                        <Text style={resultStyle.text}> ------- </Text>
+                        <Text style={resultStyle.text}> --To--> </Text>
                         <Text style={resultStyle.text}>{capitalizeTheFirstLetterOfEachWord(data.tujuan)}</Text>
                     </View>
                     
@@ -52,7 +54,7 @@ const Result = ({data}) => {
                         ></Image>
                         <View style={resultStyle.underText}>
                             <Text style={resultStyle.text}>{checkMaskapai[0].maskapai_nama}</Text>
-                            <Text style={resultStyle.textBlue}>{data.tanggal}</Text>
+                            <Text style={resultStyle.text_color}>{data.tanggal}</Text>
                         </View>
                     </View>
                     
@@ -70,7 +72,7 @@ const Result = ({data}) => {
 
 const resultStyle = StyleSheet.create({
     box:{
-        backgroundColor: '#fff',
+        backgroundColor: 'lightgrey',
         borderRadius: 20,
         padding: 10,
         width: '80%',
@@ -92,7 +94,7 @@ const resultStyle = StyleSheet.create({
     Image:{
         width: null,
         resizeMode: 'contain',
-        height: 50,
+        height: 40,
     },
     underText:{
         flexDirection: 'row',
@@ -103,9 +105,9 @@ const resultStyle = StyleSheet.create({
     text:{
         fontWeight: 'bold',
     },
-    textBlue:{
+    text_color:{
         fontWeight: 'bold',
-        color: 'blue',
+        color: 'green',
     }
 })
 

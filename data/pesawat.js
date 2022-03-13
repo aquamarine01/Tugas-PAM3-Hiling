@@ -33,20 +33,20 @@ const Maskapai = [
 
 const Bandara = [
     {
-        bandara_code: "TLG",
+        bandara_kode: "TLG",
         bandara_nama: "Talang Airport",
     },
     {
-        bandara_code: "JBG",
+        bandara_kode: "JBG",
         bandara_nama: "Jabung Airport",
     },
     {
-        bandara_code: "BWS",
+        bandara_kode: "BWS",
         bandara_nama: "Belwis Airport",
     },
     {
-        bandara_code: "ITR",
-        bandara_nama: "ITERA Airport",
+        bandara_kode: "ITR",
+        bandara_nama: "Itera Airport",
     }
 ]
 

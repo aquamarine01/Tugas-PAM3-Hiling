@@ -14,7 +14,7 @@ const Style = StyleSheet.create({
     copyright:{
         alignItems: 'center',
         position: 'absolute',
-        top: 525,
+        top: 550,
         left: 60,
     },
     Copy_text:{
