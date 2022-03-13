@@ -43,7 +43,7 @@ const Result = ({data}) => {
                 <View style={resultStyle.box} key={i}>
                     <View style={resultStyle.upperText}>
                         <Text style={resultStyle.text}>{capitalizeTheFirstLetterOfEachWord(data.keberangkatan)}</Text>
-                        <Text style={resultStyle.text}> --To--> </Text>
+                        <Text style={resultStyle.text}> --To--{'>'} </Text>
                         <Text style={resultStyle.text}>{capitalizeTheFirstLetterOfEachWord(data.tujuan)}</Text>
                     </View>
                     
