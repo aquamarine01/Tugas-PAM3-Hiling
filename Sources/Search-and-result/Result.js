@@ -28,8 +28,6 @@ const Result = ({data}) => {
                 return x.maskapai_id == printJadwal.maskapai_id
             })
             
-
-            //fungsi kapital huruf pertama disetiap kata
             var capitalizeTheFirstLetterOfEachWord = (words) => {
                 var separateWord = words.toLowerCase().split(' ');
                 for (var i = 0; i < separateWord.length; i++) {
