@@ -17,3 +17,5 @@ Aplikasi ini dibuat menggunakan React-Native dengan menggunakan library react-na
 Untuk menjalankan aplikasi ini di emulator, gunakan :
 
 > npx react-native run-android
+
+[Atau download aplikasi yang telah dibuild disini.](https://github.com/usagi13/Tugas-PAM3-Hiling/blob/main/PAM%20Ammar.apk)
