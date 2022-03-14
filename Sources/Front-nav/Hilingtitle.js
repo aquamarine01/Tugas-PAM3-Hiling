@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, StyleSheet, Colors, Image } from 'react-native';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import Entypo from 'react-native-vector-icons/Entypo';
 
 const Hilingtitle = () => {
