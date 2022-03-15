@@ -40,3 +40,7 @@ allprojects {
         maven { url 'https://www.jitpack.io' }
     }
 }
+
+// Nama    : M. Ammar Fadhila Ramadhan
+// NIM     : 119140029
+// Kelas   : PAM RB
