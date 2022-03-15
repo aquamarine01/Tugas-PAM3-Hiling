@@ -1,23 +1,23 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image } from "react-native";
 import { Maskapai, Jadwal, Bandara } from '../../data/pesawat';
 
 const Result = ({data}) => {
-    var showschd = () => {
+    var listJadwal = () => {
         var newJadwal = Jadwal.filter( (x) => {
             var checkBandaraK = Bandara.filter( (x) => 
-                 x.bandara_nama.toLowerCase() == data.keberangkatan.toLowerCase()
+                x.bandara_nama == data.keberangkatan
             )
             if (!checkBandaraK || checkBandaraK.length<1)
                 return false
             var checkBandaraT = Bandara.filter( (x) => 
-                 x.bandara_nama.toLowerCase() == data.tujuan.toLowerCase()
+                x.bandara_nama == data.tujuan
             )
             if (!checkBandaraT || checkBandaraT.length<1)
                 return false
             return (
-                x.bandara_kode_keberangkatan.toLowerCase() == checkBandaraK[0].bandara_kode.toLowerCase() &&
-                x.bandara_kode_tujuan.toLowerCase() == checkBandaraT[0].bandara_kode.toLowerCase()
+                x.bandara_kode_keberangkatan == checkBandaraK[0].bandara_kode &&
+                x.bandara_kode_tujuan == checkBandaraT[0].bandara_kode
             )
 
         })
@@ -27,22 +27,14 @@ const Result = ({data}) => {
             var checkMaskapai = Maskapai.filter( (x) => {
                 return x.maskapai_id == printJadwal.maskapai_id
             })
-        
-            var capitalizeTheFirstLetterOfEachWord = (words) => {
-                var separateWord = words.toLowerCase().split(' ');
-                for (var i = 0; i < separateWord.length; i++) {
-                   separateWord[i] = separateWord[i].charAt(0).toUpperCase() +
-                   separateWord[i].substring(1);
-                }
-                return separateWord.join(' ');
-            }
+            
 
             return(
                 <View style={resultStyle.box} key={i}>
                     <View style={resultStyle.upperText}>
-                        <Text style={resultStyle.text}>{capitalizeTheFirstLetterOfEachWord(data.keberangkatan)}</Text>
+                        <Text style={resultStyle.text}>{(data.keberangkatan)}</Text>
                         <Text style={resultStyle.text}> --To--{'>'} </Text>
-                        <Text style={resultStyle.text}>{capitalizeTheFirstLetterOfEachWord(data.tujuan)}</Text>
+                        <Text style={resultStyle.text}>{(data.tujuan)}</Text>
                     </View>
                     
                     <View style={resultStyle.bodyBox}>
@@ -52,7 +44,7 @@ const Result = ({data}) => {
                         ></Image>
                         <View style={resultStyle.underText}>
                             <Text style={resultStyle.text}>{checkMaskapai[0].maskapai_nama}</Text>
-                            <Text style={resultStyle.text_color}>{data.tanggal}</Text>
+                            <Text style={resultStyle.textBlue}>{data.tanggal}</Text>
                         </View>
                     </View>
                     
@@ -63,7 +55,7 @@ const Result = ({data}) => {
 
     return(
         <View>
-            {showschd()}
+            {listJadwal()}
         </View>
     )
 }
